@@ -11,6 +11,7 @@ console.log(amount);
 
 
 
+
 // 2nd problem part
 function sendNotification(email) {
     const index = email.indexOf('@');
@@ -81,23 +82,23 @@ function calculateFinalScore(obj) {
 
 
 // 5th problem part
-const interviewTimes = [13, 2, 6, 7, 10];
-const serialNumber = 6;
-function waitingTime(interviewTimes, serialNumber) {
-  if (!Array.isArray(interviewTimes) || typeof serialNumber !== 'number') {
+const waitingTimes  = [3, 5, 7, 11, 6, 5];
+const serialNumber = 10;
+function  waitingTime(waitingTimes  , serialNumber) {
+  if (!Array.isArray(waitingTimes ) || typeof serialNumber !== 'number') {
     return "Invalid Input";
   }
   
   let sum =0;
-  for(const time of interviewTimes){
+  for(const time of waitingTimes ){
       sum = sum + time;
   }
-  const position = (serialNumber - 1) - interviewTimes.length;
-  const count = interviewTimes.length;
+  const position = (serialNumber - 1) - waitingTimes .length;
+  const count = waitingTimes .length;
   // console.log(sum,count);
   const average = sum / count;
   return (Math.round (average) * position );
 }
 
 
-console.log(waitingTime(interviewTimes, serialNumber));
+console.log(waitingTime(waitingTimes , serialNumber));
